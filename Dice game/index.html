@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <h1>Dice Game</h1>
+    <h3 id="msg" class="msg"></h3>
+    <div class="container">
+        <div onclick="tryMyLuck(1)">1</div>
+        <div onclick="tryMyLuck(2)">2</div>
+        <div onclick="tryMyLuck(3)">3</div>
+        <div onclick="tryMyLuck(4)">6</div>
+        <div onclick="tryMyLuck(5)">4</div>
+        <div onclick="tryMyLuck(6)">5</div>
+    </div>
+    <div class="container">
+        <div class="info-box"><b>User Number :</b> <span id="user-number">10</span></div>
+        <div class="info-box"><b>Random Number :</b> <span id="random-number">3</span></div>
+        <div class="info-box"><b id="result">You Loss /</b> Win</div>
+    </div>
+    <div class="container">
+        <div class="info-box"><b>Turns :</b> 10</div>
+        <div class="info-box"><b>Win :</b> 3</div>
+        <div class="info-box"><b>Loss </b> 7</div>
+    </div> -->
+
+    <div class="container">
+        <h1>Dice Guessing Game</h1>
+        <p>Guess the secret number between 1 and 6 within 10 rounds.</p>
+        <div id="round"></div>
+        <input type="number" id="guess" placeholder="Enter your guess">
+        <button onclick="checkGuess()">Guess</button>
+        <div id="message"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
