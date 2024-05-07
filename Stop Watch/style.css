@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-image: url(stop\ watch.webp);
+}
+h2{
+    color: brown;
+    background-color: black;
+    padding: 10px 0;
+    font-size: 1.85rem;
+}
+.stopwatch {
+    width: 100%;
+    color: brown;
+    text-align: center;
+}
+
+.display {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+button {
+    color: brown;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
