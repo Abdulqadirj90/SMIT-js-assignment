@@ -3,6 +3,12 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(background\ image.jpg);
+  }
+  h1 {
+    color: #F7AE2C;
   }
   
   form {
@@ -22,6 +28,9 @@ body {
     padding: 5px 10px;
     border: none;
     cursor: pointer;
+  }
+  h2 {
+    color: #F7AE2C;
   }
   
   ul {
