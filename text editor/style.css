@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(background\ image.jpg);
+}
+
+.editor-container {
+    width: 80%;
+    max-width: 800px;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(container\ image.jpeg);
+}
+
+h2 {
+    font-size: 1.85rem;
+    text-align: center;
+    color: #fff;
+    margin: 0 ;
+    padding: 10px 0;
+}
+
+.toolbar {
+    background: #e9ecef;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.toolbar button,
+.toolbar input[type="color"],
+.toolbar select {
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+    transition: background-color 0.3s;
+}
+
+.toolbar button:hover,
+.toolbar input[type="color"]:hover,
+.toolbar select:hover {
+    background-color: #ddd;
+}
+
+.toolbar button:focus,
+.toolbar input[type="color"]:focus,
+.toolbar select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.text-area {
+    padding: 20px;
+    min-height: 400px;
+    outline: none;
+    white-space: pre-wrap;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.text-area:focus {
+    border: none;
+}

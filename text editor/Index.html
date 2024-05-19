@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Text Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="editor-container">
+        <h2>Text Editor By Abdul Qadir</h2>
+        <div class="toolbar">
+            <button onclick="formatText('bold')" title="Bold"><b>B</b></button>
+            <button onclick="formatText('italic')" title="Italic"><i>I</i></button>
+            <button onclick="formatText('underline')" title="Underline"><u>U</u></button>
+            <button onclick="formatText('justifyLeft')" title="Align Left">&#x2190;</button>
+            <button onclick="formatText('justifyCenter')" title="Align Center">&#x2194;</button>
+            <button onclick="formatText('justifyRight')" title="Align Right">&#x2192;</button>
+            <button onclick="formatText('justifyFull')" title="Justify">&#x21e5;</button>
+            <input type="color" id="textColor" onchange="setColor('foreColor', this.value)" title="Text Color">
+            <input type="color" id="bgColor" onchange="setColor('hiliteColor', this.value)" title="Background Color">
+            <select id="fontSize" onchange="setFontSize(this.value)" title="Font Size">
+                <option value="1">8pt</option>
+                <option value="2">10pt</option>
+                <option value="3" selected>12pt</option>
+                <option value="4">14pt</option>
+                <option value="5">18pt</option>
+                <option value="6">24pt</option>
+                <option value="7">36pt</option>
+            </select>
+        </div>
+        <div class="text-area" contenteditable="true"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
