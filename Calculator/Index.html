@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
     <link rel="stylesheet" href="Style.css" />
+    <title>Calculator - By Code Traversal</title>
   </head>
   <body>
-    <div>
-      <h2> Crated By Abdul Qadir </h2>
     <div class="container">
-      <input type="text" placeholder="0" />
-      <div>
-        <button type="button" class="calculator-sign active">AC</button>
-        <button type="button" class="calculator-sign">DEL</button>
-        <button type="button" class="calculator-sign">%</button>
-        <button type="button" class="calculator-sign">/</button>
-      </div>
-      <div>
-        <button type="button">7</button>
-        <button type="button">8</button>
-        <button type="button">9</button>
-        <button type="button" class="calculator-sign">*</button>
-      </div>
-      <div>
-        <button type="button">4</button>
-        <button type="button">5</button>
-        <button type="button">6</button>
-        <button type="button" class="calculator-sign">-</button>
-      </div>
-      <div>
-        <button type="button">1</button>
-        <button type="button">2</button>
-        <button type="button">3</button>
-        <button type="button" class="calculator-sign">+</button>
-      </div>
-      <div>
-        <button type="button">00</button>
-        <button type="button">0</button>
-        <button type="button">.</button>
-        <button type="button" class="equal">=</button>
-      </div>
+      <div class="calculator">
+        <input type="text" id="inputBox" placeholder="0" />
+        <div>
+          <button class="button operator">AC</button>
+          <button class="button operator">DEL</button>
+          <button class="button operator">%</button>
+          <button class="button operator">/</button>
+        </div>
+        <div>
+          <button class="button">7</button>
+          <button class="button">8</button>
+          <button class="button">9</button>
+          <button class="button operator">*</button>
+        </div>
+        <div>
+          <button class="button">4</button>
+          <button class="button">5</button>
+          <button class="button">6</button>
+          <button class="button operator">-</button>
+        </div>
+        <div>
+          <button class="button">1</button>
+          <button class="button">2</button>
+          <button class="button">3</button>
+          <button class="button operator">+</button>
+        </div>
+        <div>
+          <button class="button">00</button>
+          <button class="button">0</button>
+          <button class="button">.</button>
+          <button class="button equalBtn">=</button>
+        </div>
       </div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
