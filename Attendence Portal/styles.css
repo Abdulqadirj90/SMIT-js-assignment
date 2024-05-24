@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+}
+
+.attendance-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+#date {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #555;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 2px;
+}
+
+button.present {
+    background-color: #28a745;
+    color: white;
+}
+
+button.absent {
+    background-color: #dc3545;
+    color: white;
+}
+
+button.leave {
+    background-color: #ffc107;
+    color: white;
+}
+
+button.present:hover {
+    background-color: #218838;
+}
+
+button.absent:hover {
+    background-color: #c82333;
+}
+
+button.leave:hover {
+    background-color: #e0a800;
+}
+
+#student-info {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: none; /* Hide by default */
+}
