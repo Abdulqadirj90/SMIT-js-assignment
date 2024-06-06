@@ -67,15 +67,16 @@ body {
 
 button {
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    background-color: #0056b3;
+    color: #ccc;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #007bff;
+    opacity: 0.8;
 }
 
 .hidden {
@@ -91,10 +92,25 @@ button:hover {
     padding: 10px;
     border-bottom: 1px solid #ccc;
     color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #todos li:last-child {
     border-bottom: none;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
 }
 
 #add-todo-form {
@@ -117,4 +133,10 @@ button:hover {
 
 #add-todo-form button {
     padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+}
+
+#add-todo-form button:hover {
+    background-color: #0056b3;
 }
