@@ -6,7 +6,6 @@ body {
     height: 100vh;
     margin: 0;
     background: #000;
-    overflow: hidden; /* To prevent scrolling */
     position: relative;
 }
 
@@ -26,7 +25,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 10px #0D1222;
     border: 2px solid rgb(150, 146, 146);
-    width: 300px;
+    width: 450px; /* Increased width */
     text-align: center;
     background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
 }
@@ -41,14 +40,34 @@ body {
 }
 
 .input-group {
+    position: relative;
     margin-bottom: 15px;
     text-align: left;
+}
+
+.input-group i {
+    position: absolute;
+    left: 95%;
+    top: 30px;
     color: #fff;
 }
 
 .input-group label {
+    color: #fff;
     display: block;
     margin-bottom: 5px;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    font-size: 15, 10px;
+    color: #fff;
+}
+
+.forgot-btn {
+    padding: 6px 8px;
 }
 
 .input-group input {
@@ -67,29 +86,41 @@ body {
 
 button {
     padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #0056b3;
-    color: #ccc;
 }
 
 button:hover {
-    background-color: #007bff;
-    opacity: 0.8;
+    background-color: #0056b3;
 }
 
 .hidden {
     display: none;
 }
 
+select {
+    text-align: center;
+    font-weight: bolder;
+    padding: 8px 0;
+    color: #aaa;
+    border-radius: 8px;
+    width: calc(100% - 22px);
+    background-color: #1C1B1B;
+}
+
 #todos {
     list-style-type: none;
     padding: 0;
+    margin: 10px;
+    max-height: 200px; /* Set a fixed height for the list */
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 #todos li {
-    padding: 10px;
+    padding: 10px 0;
     border-bottom: 1px solid #ccc;
     color: #fff;
     display: flex;
@@ -101,20 +132,18 @@ button:hover {
     border-bottom: none;
 }
 
-.delete-button {
-    background-color: #dc3545;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.delete-button:hover {
-    background-color: #c82333;
+.date {
+    font-size: 0.9em;
+    color: #aaa;
+    margin-left: 10px;
 }
 
 #add-todo-form {
     margin-top: 20px;
+}
+
+#add-todo-form button{
+    margin: 10px 0;
 }
 
 #add-todo-form input {
@@ -129,14 +158,4 @@ button:hover {
 
 #add-todo-form input::placeholder {
     color: rgba(255, 255, 255, 0.7);
-}
-
-#add-todo-form button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-}
-
-#add-todo-form button:hover {
-    background-color: #0056b3;
 }

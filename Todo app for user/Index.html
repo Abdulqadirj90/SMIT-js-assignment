@@ -1,44 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <video autoplay loop muted playsinline class="background-video">
-        <source src="video-1.mp4" type="video/mp4">
-    </video>
-    <div class="login-container">
-        <div class="login-content">
-            <h1>Login</h1>
-            <form id="login-form">
-                <div class="input-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" placeholder="@gmail.com" required>
-                </div>
-                <div class="input-group">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" placeholder="Password" required>
-                </div>
-                <button type="submit">Login</button>
-            </form>
+  <video autoplay loop muted playsinline class="background-video">
+    <source src="video-1.mp4" type="video/mp4" />
+  </video>
+  <div class="login-container">
+    <div class="login-content">
+      <h1>Login</h1>
+      <form id="login-form">
+        <div class="input-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="@gmail.com" required />
+          <i class="fas fa-envelope"></i>
         </div>
-        <div id="todo-list" class="hidden">
-            <h2>Todo List</h2>
-            <ul id="todos">
-                <li>Buy groceries <button class="delete-button">Delete</button></li>
-                <li>Finish homework <button class="delete-button">Delete</button></li>
-                <li>Call mom <button class="delete-button">Delete</button></li>
-                <li>Pay bills <button class="delete-button">Delete</button></li>
-            </ul>
-            <form id="add-todo-form">
-                <input type="text" id="new-todo" placeholder="New todo" required>
-                <button type="submit">Add</button>
-            </form>
+        <div class="input-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" placeholder="Password" require/>
+          <i class="fas fa-lock"></i>
         </div>
+        <div class="remember-forgot">
+          <label> <input type="checkbox">Remember me</label>
+          <button type="reset" class="forgot-btn">Forgot Password?</button>
+        </div>
+        <button type="submit">Login</button>
+      </form>
     </div>
-    <script src="script.js"></script>
+    <div id="todo-list" class="hidden">
+      <h2>Todo List</h2>
+      <div id="category-list">
+        <h3>Category:</h3>
+        <select onchange="chooseCategory(this)">
+          <option value="all">All</option>
+          <option value="groceries">Personal</option>
+          <option value="homework">Subject</option>
+          <option value="mom">Work</option>
+          <option value="bills">Important</option>
+        </select>
+      </div>
+      <ul id="todos">
+        <li data-category="groceries">Buy groceries <span class="date"></span></li>
+        <li data-category="homework">Finish homework <span class="date"></span></li>
+        <li data-category="mom">Call mom <span class="date"></span></li>
+        <li data-category="bills">Pay bills <span class="date"></span></li>
+      </ul>
+      <form id="add-todo-form">
+        <input type="text" id="new-todo" placeholder="New todo" required />
+        <button type="submit">Add</button>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
