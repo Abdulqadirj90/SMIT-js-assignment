@@ -22,7 +22,7 @@
         </div>
         <div class="input-group">
           <label for="password">Password:</label>
-          <input type="password" id="password" placeholder="Password" require/>
+          <input type="password" id="password" placeholder="Password" required/>
           <i class="fas fa-lock"></i>
         </div>
         <div class="remember-forgot">
@@ -36,12 +36,13 @@
       <h2>Todo List</h2>
       <div id="category-list">
         <h3>Category:</h3>
-        <select onchange="chooseCategory(this)">
+        <select id="category-filter" onchange="chooseCategory(this)">
           <option value="all">All</option>
           <option value="groceries">Personal</option>
-          <option value="homework">Subject</option>
-          <option value="mom">Work</option>
-          <option value="bills">Important</option>
+          <option value="homework">Projects</option>
+          <option value="mom">HomeWork</option>
+          <option value="exams">Exams</option>
+          <option value="bills">Extracurricular Activities</option>
         </select>
       </div>
       <ul id="todos">
@@ -49,10 +50,12 @@
         <li data-category="homework">Finish homework <span class="date"></span></li>
         <li data-category="mom">Call mom <span class="date"></span></li>
         <li data-category="bills">Pay bills <span class="date"></span></li>
+        <li data-category="bills">Extracurricular Activities <span class="date"></span></li>
       </ul>
       <form id="add-todo-form">
-        <input type="text" id="new-todo" placeholder="New todo" required />
+        <input type="text" id="new-todo" placeholder="Add New Task" required />
         <button type="submit">Add</button>
+      <button id="delete-all-button">Delete All</button>
       </form>
     </div>
   </div>

@@ -62,7 +62,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin: 20px 0;
-    font-size: 15, 10px;
+    font-size: 15px;
     color: #fff;
 }
 
@@ -109,6 +109,7 @@ select {
     border-radius: 8px;
     width: calc(100% - 22px);
     background-color: #1C1B1B;
+    margin: 10px 0;
 }
 
 #todos {
@@ -142,11 +143,11 @@ select {
     margin-top: 20px;
 }
 
-#add-todo-form button{
+#add-todo-form button {
     margin: 10px 0;
 }
 
-#add-todo-form input {
+#add-todo-form input, #add-todo-form select {
     width: calc(100% - 22px);
     padding: 10px;
     margin-right: 5px;
@@ -158,4 +159,18 @@ select {
 
 #add-todo-form input::placeholder {
     color: rgba(255, 255, 255, 0.7);
+}
+
+#delete-all-button {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#delete-all-button:hover {
+    background-color: #cc0000;
 }
