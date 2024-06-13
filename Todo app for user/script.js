@@ -4,12 +4,15 @@ document.getElementById("login-form").addEventListener("submit", function (event
     const password = document.getElementById("password").value;
 
     // Check for the specific email address and password, or allow any other email with any non-empty password
-    if ((email === "user@example.com" && password === "admin1") || (email !== "user@example.com" && password)) {
+    if ((email === "admin@gmail.com" && password === "admin1") || (email !== "admin@gmail.com" && password)) {
         document.querySelector(".login-content").classList.add("hidden");
         document.getElementById("todo-list").classList.remove("hidden");
 
         // Save current email to local storage
         localStorage.setItem("currentUser", email);
+
+        // Display logged-in email
+        displayLoggedInEmail(email);
 
         // Load existing todos for the current user from local storage
         loadTodos(email);
@@ -22,6 +25,7 @@ document.getElementById("login-form").addEventListener("submit", function (event
             document.querySelector(".login-content").classList.remove("hidden");
             document.getElementById("todo-list").classList.add("hidden");
             logoutButton.remove(); // Remove the logout button
+            removeLoggedInEmail(); // Remove displayed email
             localStorage.removeItem("currentUser"); // Remove current user from local storage
             window.location.reload(); // Redirect to home page
         });
@@ -30,6 +34,27 @@ document.getElementById("login-form").addEventListener("submit", function (event
         alert("Invalid email or password");
     }
 });
+
+function displayLoggedInEmail(email) {
+    // Create an element to display the logged-in email
+    const loggedInEmailElement = document.createElement("p");
+    loggedInEmailElement.textContent = `Logged in as: ${email}`;
+    loggedInEmailElement.style.color = "#fff"; // Customize styles as per your design
+    loggedInEmailElement.id = "logged-in-email";
+
+    // Insert the logged-in email element into the todo list section
+    document.getElementById("todo-list").insertBefore(loggedInEmailElement, document.getElementById("category-list"));
+}
+
+function removeLoggedInEmail() {
+    // Remove the displayed logged-in email element
+    const loggedInEmailElement = document.getElementById("logged-in-email");
+    if (loggedInEmailElement) {
+        loggedInEmailElement.remove();
+    }
+}
+
+// Existing code for adding todos, deleting todos, etc. (as per your previous setup)
 
 document.getElementById("add-todo-form").addEventListener("submit", function (event) {
     event.preventDefault();
